@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Charity Water Game</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="game-container">
+    <h1>💧 Charity Water Challenge 💧</h1>
+
+    <div id="score">Score: 0</div>
+
+    <div class="tube-container">
+      <div class="tube">
+        <div id="fill"></div>
+      </div>
+      <div id="obstacle" class="obstacle">💨</div>
+    </div>
+
+    <p class="instructions">
+      Tap the screen or press the spacebar to pump water! Avoid dirty water!
+    </p>
+
+    <div class="buttons">
+      <button id="start-btn">Start</button>
+      <button id="restart-btn">Restart</button>
+    </div>
+
+    <div id="fact-box" class="fact-box">Fact: </div>
+  </div>
+
+  <!-- Confetti library -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.0/dist/confetti.browser.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
