@@ -1,4 +1,3 @@
-/* Charity: water Brand Colors */
 :root {
   --yellow: #ffc907;
   --blue: #2e9df7;
@@ -6,18 +5,16 @@
   --green: #4fcb53;
   --orange: #ff902a;
   --red: #f5402c;
-  --dark-green: #159a48;
-  --pink: #f16061;
-  --bg: #f5f9fc;
+  --bg-gradient: linear-gradient(to bottom, #cbe7ff, #f5f9fc);
   --text: #1a1a1a;
 }
 
-/* General layout */
 body {
   font-family: "Poppins", sans-serif;
-  background-color: var(--bg);
+  background: var(--bg-gradient);
   color: var(--text);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
@@ -30,6 +27,10 @@ body {
   max-width: 400px;
   width: 90%;
   position: relative;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
@@ -38,7 +39,6 @@ h1 {
   margin-bottom: 1rem;
 }
 
-/* Tube visual */
 .tube-container {
   position: relative;
   display: flex;
@@ -63,10 +63,22 @@ h1 {
   width: 100%;
   height: 0%;
   background-color: var(--blue);
-  transition: height 0.4s ease-in-out;
+  transition: height 0.3s ease-in-out;
 }
 
-/* Buttons */
+.milestone {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--orange);
+  margin: 10px 0;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.milestone.show {
+  opacity: 1;
+}
+
 .buttons {
   display: flex;
   justify-content: center;
@@ -89,7 +101,11 @@ button:hover {
   transform: scale(1.05);
 }
 
-/* Fact box */
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 .fact-box {
   background: var(--light-blue);
   color: #00344a;
@@ -97,53 +113,15 @@ button:hover {
   padding: 10px;
   font-size: 0.95rem;
   min-height: 2.5rem;
-  transition: background 0.3s ease;
 }
 
-/* Instructions */
-.instructions {
+footer {
+  margin-top: 20px;
+  text-align: center;
   font-size: 0.9rem;
-  color: #444;
-  margin: 10px 0;
 }
 
-/* Flash when obstacle hit */
-.flash {
-  animation: flashRed 0.3s ease;
-}
-
-@keyframes flashRed {
-  0% { background-color: #f5402c33; }
-  100% { background-color: var(--bg); }
-}
-
-/* Obstacle animation */
-.obstacle {
-  position: absolute;
-  font-size: 2rem;
-  opacity: 0;
-  transition: opacity 0.3s ease, transform 0.6s ease;
-  transform: translateY(20px);
-}
-
-.obstacle.show {
-  opacity: 1;
-  transform: translateY(-20px);
-}
-
-/* Responsive design */
-@media (max-width: 600px) {
-  h1 {
-    font-size: 1.4rem;
-  }
-
-  .tube {
-    width: 80px;
-    height: 240px;
-  }
-
-  button {
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
-  }
+footer a {
+  color: var(--blue);
+  text-decoration: none;
 }

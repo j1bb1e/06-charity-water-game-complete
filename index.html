@@ -10,17 +10,27 @@
   <div class="game-container">
     <h1>💧 Charity Water Challenge 💧</h1>
 
+    <div id="difficulty">
+      <label for="mode">Difficulty: </label>
+      <select id="mode">
+        <option value="easy">Easy</option>
+        <option value="normal" selected>Normal</option>
+        <option value="hard">Hard</option>
+      </select>
+    </div>
+
     <div id="score">Score: 0</div>
 
     <div class="tube-container">
       <div class="tube">
         <div id="fill"></div>
       </div>
-      <div id="obstacle" class="obstacle">💨</div>
     </div>
 
+    <div id="milestone" class="milestone"></div>
+
     <p class="instructions">
-      Tap the screen or press the spacebar to pump water! Avoid dirty water!
+      Press the spacebar to pump water! 💨 Dirty water may subtract points!
     </p>
 
     <div class="buttons">
@@ -31,7 +41,10 @@
     <div id="fact-box" class="fact-box">Fact: </div>
   </div>
 
-  <!-- Confetti library -->
+  <footer>
+    <p>Learn more about <a href="https://www.charitywater.org" target="_blank">charity: water</a> or <a href="https://www.charitywater.org/donate" target="_blank">donate here</a>.</p>
+  </footer>
+
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.0/dist/confetti.browser.min.js"></script>
   <script src="script.js"></script>
 </body>
